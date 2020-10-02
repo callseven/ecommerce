@@ -83,7 +83,7 @@ class User extends Model {
         {
 			$user = new User();
 			
-			$data['desperson'] = utf8_encode($data['desperson']);
+			//$data['desperson'] = utf8_encode($data['desperson']);
 
             $user->setData($data);
 
