@@ -300,7 +300,7 @@ public static function validForgotDecrypt($code)
     {
         $sql = new Sql();
 
-        $sql->query("UPDATE tb_userspasswordrecoveries SET dtrecovery = NOW() WHERE idrecovery = :idrecovery". array(
+        $sql->query("UPDATE tb_userspasswordrecoveries SET dtrecovery = NOW() WHERE idrecovery = :idrecovery", array(
             ":idrecovery"=>$idrecovery
         ));
     }
