@@ -68,9 +68,8 @@ class User extends Model {
     {
         $sql = new Sql();
 
-        $results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array (
-            ":LOGIN"=>$login
-        ));
+		//$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array (":LOGIN"=>$login));
+		$results = $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b ON a.idperson WHERE a.deslogin = :LOGIN", array(":LOGIN"=>$login));
 
         if (count($results) === 0)
         {
@@ -83,7 +82,7 @@ class User extends Model {
         {
 			$user = new User();
 			
-			//$data['desperson'] = utf8_encode($data['desperson']);
+			$data['desperson'] = utf8_encode($data['desperson']);
 
             $user->setData($data);
 

@@ -256,11 +256,11 @@ $app->post("/checkout", function(){
 	switch ((int)$_POST['payment-method']) {
 
 		case 1:
-		header("Location: /order/".$order->getidorder()."/pagseguro");
+		header("Location: /order/".$order->getidorder()."pagseguro");
 		break;
 
 		case 2:
-		header("Location: /order/".$order->getidorder()."/paypal");
+		header("Location: /order/".$order->getidorder()."paypal");
 		break;
 
 	}
@@ -476,7 +476,7 @@ $app->post("/forgot/reset", function(){
 
 $app->get("/profile", function(){
 
-	User::verifyLogin(false);
+	//User::verifyLogin(false);
 
 	$user = User::getFromSession();
 
@@ -489,6 +489,18 @@ $app->get("/profile", function(){
 	]);
 
 });
+$app->get("/login", function(){
+
+	$page = new Page();
+
+	$page->setTpl("login", [
+		'error'=>User::getError(),
+		'errorRegister'=>User::getErrorRegister(),
+		'registerValues'=>(isset($_SESSION['registerValues'])) ? $_SESSION['registerValues'] : ['name'=>'', 'email'=>'', 'phone'=>'']
+	]);
+
+});
+
 
 $app->post("/profile", function(){
 
@@ -526,7 +538,7 @@ $app->post("/profile", function(){
 
 	$user->setData($_POST);
 
-	$user->save();
+	$user->update();
 
 	User::setSuccess("Dados alterados com sucesso!");
 
