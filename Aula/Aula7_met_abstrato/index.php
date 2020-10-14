@@ -19,7 +19,7 @@
         echo $chequeComum->calcularJuros();
         
         $chequeEspecial = new ChequeEspecial(100.10, "Especial");
-        echo $chequeEspecial->calcularJuros2();
+        echo $chequeEspecial->calcularJuros();
         ?>
     </body>
 </html>
