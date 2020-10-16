@@ -969,7 +969,7 @@ d="M224 320v0l224 -128l-224 -128v123l-224 -123v256l224 -123v123z" />
 d="M288 320l64 -96v-160h-176h-176v160l64 96h224zM333 224l-45 68v-68h45zM80 304v-80h48c0 -26 22 -48 48 -48s48 22 48 48h48v80h-192zM64 292l-45 -68h45v68zM336 80v128h-98c-7 -28 -32 -48 -62 -48s-55 20 -62 48h-98v-128h160h160z" />
     <glyph glyph-name="ion-ios-filing" unicode="&#xf429;" horiz-adv-x="352" 
 d="M176 160c30 0 55 20 62 48h114v-144h-176h-176v144h114c7 -28 32 -48 62 -48zM64 224h-7h-57l64 96v0v-80h16v80h192v-80h16v80v0l64 -96h-56h-8h-16h-8h-40c0 -26 -22 -48 -48 -48s-48 22 -48 48h-39h-9h-16z" />
-    <glyph glyph-name="ion-ios-film-outline" unicode="&#xf42a;" horiz-adv-x="400" 
+    <glyph glyph-name="glyphicon glyphicon-plus" unicode="&#xf42a;" horiz-adv-x="400" 
 d="M0 360h400v-336h-400v336zM72 40v48h-56v-48h56zM72 104v48h-56v-48h56zM72 168v48h-56v-48h56zM72 232v48h-56v-48h56zM72 296v48h-56v-48h56zM312 40v144h-224v-144h224zM312 200v144h-224v-144h224zM384 40v48h-56v-48h56zM384 104v48h-56v-48h56zM384 168v48h-56v-48
 h56zM384 232v48h-56v-48h56zM384 296v48h-56v-48h56z" />
     <glyph glyph-name="ion-ios-film" unicode="&#xf42b;" horiz-adv-x="400" 
