@@ -2,8 +2,8 @@
 session_start();
 ob_start();
 
-define('URL', 'http://localhost/celke/');
-define('URLADM', 'http://localhost/celke/adm/');
+define('URL', 'http://localhost/celkecorreto/');
+define('URLADM', 'http://localhost/celkecorreto/adm/');
 
 define('CONTROLER', 'Home');
 define('METODO', 'index');
@@ -12,4 +12,4 @@ define('METODO', 'index');
 define('HOST', '127.0.0.1');
 define('USER', 'root');
 define('PASS', '123456');
-define('DBNAME', 'celke');
+define('DBNAME', 'celke2');
