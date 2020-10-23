@@ -4,13 +4,13 @@ if (!defined('URL')) {
     exit();
 }
 
-echo "Home <br>";
-echo "<a href='".URLADM . "login/logout'>Sair</a><br>";
+//echo "Home <br>";
+//echo "<a href='".URLADM . "login/logout'>Sair</a><br>";
 
 ?>
 
 
-<!-- <div class="content p-1">
+<div class="content p-1">
     <div class="list-group-item">
         <div class="d-flex">
             <div class="mr-auto p-2">
@@ -56,4 +56,4 @@ echo "<a href='".URLADM . "login/logout'>Sair</a><br>";
             </div>
         </div>
     </div>
-</div> -->
+</div>

@@ -18,6 +18,6 @@
         } ?>"> 
         </div>
         <input name="RecupUserLogin" type="submit" class="btn btn-lg btn-primary btn-block" value="Recuperar">
-        <p class="text-center">Lembrou? <a href="<?php echo URLADM . 'login/acesso' ?>">Clique aqui</a> para logar</p>
+        <p class="text-center"> <a href="<?php echo URLADM . 'login/acesso' ?>">Clique aqui</a> para logar</p>
     </form>
 </body>

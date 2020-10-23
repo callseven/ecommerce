@@ -2,8 +2,13 @@
 
 namespace App\adms\Models\helper;
 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+//require 'adm/vendor/phpmailer/phpmailer/src/Exception.php';
+//require 'adm/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+//require 'adm/vendor/phpmailer/phpmailer/src/SMTP.php';
 
 if (!defined('URL')) {
     header("Location: /");
@@ -34,6 +39,7 @@ class AdmsPhpMailer
         $credEmail = new \App\adms\Models\helper\AdmsRead();
         $credEmail->fullRead("SELECT * FROM adms_confs_emails WHERE id =:id LIMIT :limit", "id=1&limit=1");
         $this->DadosCredEmail = $credEmail->getResultado();
+       // var_dump($this->DadosCredEmail);
 
         if ((isset($this->DadosCredEmail[0]['host'])) AND ( !empty($this->DadosCredEmail[0]['host']))) {
             $this->confEmail();
