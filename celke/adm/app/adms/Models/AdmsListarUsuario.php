@@ -48,6 +48,7 @@ class AdmsListarUsuario
                 WHERE nivac.ordem >=:ordem
                 ORDER BY id DESC LIMIT :limit OFFSET :offset", "ordem=".$_SESSION['ordem_nivac']."&limit={$this->LimiteResultado}&offset={$paginacao->getOffset()}");
         $this->Resultado = $listarUsuario->getResultado();
+        
         return $this->Resultado;
     }
 

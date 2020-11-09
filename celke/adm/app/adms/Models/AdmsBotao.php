@@ -38,11 +38,15 @@ class AdmsBotao
                     AND pg.adms_sits_pg_id = 1
                     AND nivpg.adms_niveis_acesso_id =:adms_niveis_acesso_id
                     AND nivpg.permissao= 1 LIMIT :limit", "menu_controller=$menu_controller&menu_metodo=$menu_metodo&adms_niveis_acesso_id=".$_SESSION['adms_niveis_acesso_id']."&limit=1");
-            
+            //echo "<br><br><br>";
+            //var_dump($verBotao);
             if($verBotao->getResultado()){
                 $this->BotaoValido[$key] = true;
+                //echo "<br><br><br";
+                //var_dump($this->BotaoValido[$key]);
             }else{
                 $this->BotaoValido[$key] = false;
+                
             }
         }    
         return $this->BotaoValido;

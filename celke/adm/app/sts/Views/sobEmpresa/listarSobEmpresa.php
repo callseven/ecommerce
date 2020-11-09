@@ -8,12 +8,12 @@ if (!defined('URL')) {
     <div class="list-group-item">
         <div class="d-flex">
             <div class="mr-auto p-2">
-                <h2 class="display-4 titulo">Listar Carousel</h2>
+                <h2 class="display-4 titulo">Listar Sobre Empresa</h2>
             </div>
             <?php
-            if ($this->Dados['botao']['cad_carousel']) {
+            if ($this->Dados['botao']['cad_sob_emp']) {
                 ?>
-                <a href="<?php echo URLADM . 'cadastrar-carousel/cad-carousel'; ?>">
+                <a href="<?php echo URLADM . 'cadastrar-sob-empresa/cad-sob-empresa'; ?>">
                     <div class="p-2">
                         <button class="btn btn-outline-success btn-sm">
                             Cadastrar
@@ -26,10 +26,10 @@ if (!defined('URL')) {
 
         </div>
         <?php
-        if (empty($this->Dados['listCarousel'])) {
+        if (empty($this->Dados['listSobEmpresa'])) {
             ?>
             <div class="alert alert-danger" role="alert">
-                Nenhum slide de carousel encontrado!
+                Nenhum sobre empresa encontrado!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -55,20 +55,20 @@ if (!defined('URL')) {
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($this->Dados['listCarousel'] as $carousel) {
-                        extract($carousel);
+                    foreach ($this->Dados['listSobEmpresa'] as $sobempresa) {
+                        extract($sobempresa);
                         ?>
                         <tr>
                             <th><?php echo $id; ?></th>
-                            <td><?php echo $nome; ?></td>
+                            <td><?php echo $titulo; ?></td>
                             <td class="d-none d-sm-table-cell">
-                                <?php echo "<img src='" . URL . "assets/imagens/carousel/$id/$imagem' width='150' height='60'>"; ?>
+                                <?php echo "<img src='" . URL . "assets/imagens/sob_emp/$id/$imagem' width='100' height='85'>"; ?>
                             </td>
                             <td><?php echo $ordem; ?></td>
                             <td class="d-none d-lg-table-cell">
                                 <?php
-                                if ($this->Dados['botao']['alt_sit_carousel']) {
-                                    echo "<a href='" . URLADM . "alt-sit-carousel/alt-sit-carousel/$id'><span class='badge badge-pill badge-$cor_cr'>$nome_sit</span></a>";
+                                if ($this->Dados['botao']['alt_sit_sob_emp']) {
+                                    echo "<a href='" . URLADM . "alt-sit-sob-empresa/alt-sit-sob-empresa/$id'><span class='badge badge-pill badge-$cor_cr'>$nome_sit</span></a>";
                                 } else {
                                     echo "<span class='badge badge-pill badge-$cor_cr'>$nome_sit</span>";
                                 }
@@ -77,17 +77,17 @@ if (!defined('URL')) {
                             <td class="text-center">
                                 <span class="d-none d-md-block">
                                     <?php
-                                    if ($this->Dados['botao']['ordem_carousel']) {
-                                        echo "<a href='" . URLADM . "alt-ordem-carousel/alt-ordem-carousel/$id' class='btn btn-outline-secondary btn-sm'><i class='fas fa-angle-double-up'></i></a> ";
+                                    if ($this->Dados['botao']['ordem_sob_emp']) {
+                                        echo "<a href='" . URLADM . "alt-ordem-sob-empresa/alt-ordem-sob-empresa/$id' class='btn btn-outline-secondary btn-sm'><i class='fas fa-angle-double-up'></i></a> ";
                                     }
-                                    if ($this->Dados['botao']['vis_carousel']) {
-                                        echo "<a href='" . URLADM . "ver-carousel/ver-carousel/$id' class='btn btn-outline-primary btn-sm'>Visualizar</a> ";
+                                    if ($this->Dados['botao']['vis_sob_emp']) {
+                                        echo "<a href='" . URLADM . "ver-sob-empresa/ver-sob-empresa/$id' class='btn btn-outline-primary btn-sm'>Visualizar</a> ";
                                     }
-                                    if ($this->Dados['botao']['edit_carousel']) {
-                                        echo "<a href='" . URLADM . "editar-carousel/edit-carousel/$id' class='btn btn-outline-warning btn-sm'>Editar</a> ";
+                                    if ($this->Dados['botao']['edit_sob_emp']) {
+                                        echo "<a href='" . URLADM . "editar-sob-empresa/edit-sob-empresa/$id' class='btn btn-outline-warning btn-sm'>Editar</a> ";
                                     }
-                                    if ($this->Dados['botao']['del_carousel']) {
-                                        echo "<a href='" . URLADM . "apagar-carousel/apagar-carousel/$id' class='btn btn-outline-danger btn-sm' data-confirm='Tem certeza de que deseja excluir o item selecionado?'>Apagar</a> ";
+                                    if ($this->Dados['botao']['del_sob_emp']) {
+                                        echo "<a href='" . URLADM . "apagar-sob-empresa/apagar-sob-empresa/$id' class='btn btn-outline-danger btn-sm' data-confirm='Tem certeza de que deseja excluir o item selecionado?'>Apagar</a> ";
                                     }
                                     ?>
                                 </span>
@@ -97,14 +97,14 @@ if (!defined('URL')) {
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
                                         <?php
-                                        if ($this->Dados['botao']['vis_carousel']) {
-                                            echo "<a class='dropdown-item' href='" . URLADM . "ver-carousel/ver-carousel/$id'>Visualizar</a>";
+                                        if ($this->Dados['botao']['vis_sob_emp']) {
+                                            echo "<a class='dropdown-item' href='" . URLADM . "ver-sob-empresa/ver-sob-empresa/$id'>Visualizar</a>";
                                         }
-                                        if ($this->Dados['botao']['edit_carousel']) {
-                                            echo "<a class='dropdown-item' href='" . URLADM . "editar-carousel/edit-carousel/$id'>Editar</a>";
+                                        if ($this->Dados['botao']['edit_sob_emp']) {
+                                            echo "<a class='dropdown-item' href='" . URLADM . "editar-sob-empresa/edit-sob-empresa/$id'>Editar</a>";
                                         }
-                                        if ($this->Dados['botao']['del_carousel']) {
-                                            echo "<a class='dropdown-item' href='" . URLADM . "apagar-carousel/apagar-carousel/$id' data-confirm='Tem certeza de que deseja excluir o item selecionado?'>Apagar</a>";
+                                        if ($this->Dados['botao']['del_sob_emp']) {
+                                            echo "<a class='dropdown-item' href='" . URLADM . "apagar-sob-empresa/apagar-sob-empresa/$id' data-confirm='Tem certeza de que deseja excluir o item selecionado?'>Apagar</a>";
                                         }
                                         ?>
 

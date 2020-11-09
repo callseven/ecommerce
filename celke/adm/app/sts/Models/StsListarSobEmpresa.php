@@ -8,11 +8,11 @@ if (!defined('URL')) {
 }
 
 /**
- * Description of StsListarCarousel
+ * Description of StsListarSobEmpresa
  *
  * @copyright (c) year, Cesar Szpak - Celke
  */
-class StsListarCarousel
+class StsListarSobEmpresa
 {
 
     private $Resultado;
@@ -26,23 +26,23 @@ class StsListarCarousel
     }
 
     
-    public function listarCarousel($PageId = null)
+    public function listarSobEmpresa($PageId = null)
     {
         $this->PageId = (int) $PageId;
-        $paginacao = new \App\adms\Models\helper\AdmsPaginacao(URLADM . 'carousel/listar');
+        $paginacao = new \App\adms\Models\helper\AdmsPaginacao(URLADM . 'sob-empresa/listar');
         $paginacao->condicao($this->PageId, $this->LimiteResultado);
-        $paginacao->paginacao("SELECT COUNT(id) AS num_result FROM sts_carousels");
+        $paginacao->paginacao("SELECT COUNT(id) AS num_result FROM sts_sobs_emps");
         $this->ResultadoPg = $paginacao->getResultado();
                
-        $listarCarousel = new \App\adms\Models\helper\AdmsRead();
-        $listarCarousel->fullRead("SELECT car.id, car.nome, car.imagem, car.link, car.ordem,
+        $listarSobEmpresa = new \App\adms\Models\helper\AdmsRead();
+        $listarSobEmpresa->fullRead("SELECT car.id, car.titulo, car.imagem, car.ordem,
                 sit.nome nome_sit,
                 cr.cor cor_cr
-                FROM sts_carousels car 
+                FROM sts_sobs_emps car 
                 INNER JOIN adms_sits sit ON sit.id=car.adms_sit_id
                 INNER JOIN adms_cors cr ON cr.id=sit.adms_cor_id
                 ORDER BY ordem ASC LIMIT :limit OFFSET :offset", "limit={$this->LimiteResultado}&offset={$paginacao->getOffset()}");
-        $this->Resultado = $listarCarousel->getResultado();
+        $this->Resultado = $listarSobEmpresa->getResultado();
         return $this->Resultado;
     }
 
