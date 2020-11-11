@@ -34,7 +34,7 @@ if (isset($this->Dados['form'][0])) {
                 </div>
             </div>
             
-            <div class="form-row">
+            <div class="form-row">                
                 <div class="form-group col-md-12">
                     <label><span class="text-danger">*</span> Descrição</label>
                     <input name="descricao" type="text" class="form-control" placeholder="Descrição do vídeo" value="<?php
@@ -46,15 +46,14 @@ if (isset($this->Dados['form'][0])) {
             </div>
             
             <div class="form-row">
-                <label><span class="text-danger">*</span>Emded do Vídeo</label>
+                <label><span class="text-danger">*</span> Embed do Vídeo</label>
                 <textarea name="video" class="form-control" rows="3"><?php
                     if (isset($valorForm['video'])) {
                         echo $valorForm['video'];
                     }
-                ?>
+                    ?>
                 </textarea>
-            </div>    
-                        
+            </div>
             
 
             <p>

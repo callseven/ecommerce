@@ -76,6 +76,35 @@ if (!defined('URL')) {
                         </ol>
                     </div>
                 </aside>
+
+                <?php
+                //   var_dump($this->Dados);
+                if (!empty($this->Dados['sts_coment']['0'])) {
+                    echo "<div class='col-md-8 blog-main'>";
+                    foreach ($this->Dados['sts_coment'] as $comentario){
+                        extract($comentario);
+                        echo "<div class='media'>";
+                        if(!empty($imagem_user)){
+                            echo "<img class='mr-3' src='".URLADM."assets/imagens/usuario/$id_user/$imagem_user'  alt='$apelido' width='30' height='30'>";
+
+                        }else{
+                            echo "<img class='mr-3' src='".URLADM."assets/imagens/usuario/icone_usuario.png'  alt='$apelido' width='30' heigth='30'>";
+
+                        }
+                        echo "<div class='media-body'>";
+                            echo "<h6 class='mt-0'>$apelido</h6>";
+                        echo $conteudo. "<br><br>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                    
+                    echo "</div>";
+                }
+                ?>
+
+
+    
+
             </div>
         </div>
     </div>					

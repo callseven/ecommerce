@@ -55,8 +55,8 @@ if (!defined('URL')) {
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($this->Dados['listSobEmpresa'] as $sobempresa) {
-                        extract($sobempresa);
+                    foreach ($this->Dados['listSobEmpresa'] as $carousel) {
+                        extract($carousel);
                         ?>
                         <tr>
                             <th><?php echo $id; ?></th>
