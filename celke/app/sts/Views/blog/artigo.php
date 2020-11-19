@@ -77,10 +77,62 @@ if (!defined('URL')) {
                     </div>
                 </aside>
 
+                <div class='col-md-8 blog-main'>
+                <span id="msg_comentario"></span>
                 <?php
-                //   var_dump($this->Dados);
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+                //var_dump($_SESSION['form']);
+                if (!empty($this->Dados['sts_artigos'][0])){
+// var_dump($this->Dados['sts_artigos'][0]);
+                
+                ?>
+                <h3>Participe da Discussão</h3>
+                <form method="POST" action="<?php echo URL;?>comentario/index">
+                <input type="hidden" name="sts_artigo_id" value="<?php echo $this->Dados['sts_artigos'][0]['id']; ?>">
+                <input type="hidden" name="slug" value="<?php echo $this->Dados['sts_artigos'][0]['slug']; ?>">
+                <div class="form-group row">
+    <label  class="col-sm-2 col-form-label"><span class="text-danger">*</span>Nome</label>
+    
+    <div class="col-sm-10">
+      <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" value="<?php if(isset($_SESSION['form']['nome'])) {echo $_SESSION['form']['nome'];} ?>">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"><span class="text-danger">*</span>Apelido</label>
+    <div class="col-sm-10">
+      <input type="text"  name="apelido" class="form-control" id="apelido" placeholder="Apelido">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"><span class="text-danger">*</span>Email</label>
+    <div class="col-sm-10">
+      <input type="email"  name="email" class="form-control" id="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+  <label for="conteudo" class="col-sm-2 col-form-label"><span class="text-danger">*</span>Conteúdo</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" name="conteudo" id="conteudo" rows="3"></textarea>
+    </div>                            
+  </div>
+  <p>
+        <span class="text-danger">*</span>Campo obrigatório
+  </p>
+        <input name="CadComent" type="submit" class="btn btn-warning" value="Cadastrar">
+</form>
+<br><hr><br>
+
+<h2>Comentários</h2>
+<p><br></p>
+
+                <?php
+                }
                 if (!empty($this->Dados['sts_coment']['0'])) {
-                    echo "<div class='col-md-8 blog-main'>";
+                    //  var_dump($this->Dados);
+                    // echo "<div class='col-md-8 blog-main'>";
                     foreach ($this->Dados['sts_coment'] as $comentario){
                         extract($comentario);
                         echo "<div class='media'>";
@@ -98,13 +150,13 @@ if (!defined('URL')) {
                         echo "</div>";
                     }
                     
-                    echo "</div>";
                 }
                 ?>
 
 
     
 
+            </div>
             </div>
         </div>
     </div>					
