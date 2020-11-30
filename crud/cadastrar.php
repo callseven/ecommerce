@@ -10,6 +10,7 @@ use App\Entity\Vaga;
         $obVaga->titulo = $_POST['titulo'];
         $obVaga->descricao = $_POST['descricao'];
         $obVaga->ativo = $_POST['ativo'];
+        $obVaga->cadastrar();
     }
 
 include __DIR__.'/include/header.php';
