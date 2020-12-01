@@ -1,0 +1,36 @@
+
+
+- Installing psy/psysh (v0.10.4): Downloading (100%)         
+cakephp/app suggests installing markstory/asset_compress (An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.)
+cakephp/app suggests installing dereuromark/cakephp-ide-helper (After baking your code, this keeps your annotations in sync with the code evolving from there on for maximum IDE and PHPStan/Psalm compatibility.)
+cakephp/app suggests installing phpstan/phpstan (PHPStan focuses on finding errors in your code without actually running it. It catches whole classes of bugs even before you write tests for the code.)
+cakephp/cakephp suggests installing lib-ICU (The intl PHP library, to use Text::transliterate() or Text::slug())
+cakephp/cakephp suggests installing paragonie/csp-builder (CSP builder, to use the CSP Middleware)
+symfony/config suggests installing symfony/yaml (To use the yaml reference dumper)
+symfony/service-contracts suggests installing symfony/service-implementation ()
+symfony/console suggests installing symfony/event-dispatcher ()
+symfony/console suggests installing symfony/lock ()
+robmorgan/phinx suggests installing symfony/yaml (Install if using YAML configuration format)
+cakephp/migrations suggests installing dereuromark/cakephp-ide-helper (If you want to have IDE suggest/autocomplete when creating migrations.)
+m1/env suggests installing m1/vars (For loading of configs)
+cakephp/debug_kit suggests installing ext-pdo_sqlite (DebugKit needs to store panel data in a database. SQLite is simple and easy to use.)
+sebastian/global-state suggests installing ext-uopz (*)
+phpunit/php-code-coverage suggests installing ext-xdebug (^2.7.2)
+phpunit/phpunit suggests installing phpunit/php-invoker (^2.0.0)
+phpunit/phpunit suggests installing ext-soap (*)
+phpunit/phpunit suggests installing ext-xdebug (*)
+psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+psy/psysh suggests installing hoa/console (A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit.)
+Package phpunit/php-token-stream is abandoned, you should avoid using it. No replacement was suggested.
+Writing lock file
+Generating autoload files
+PHP CodeSniffer Config installed_paths set to ../../cakephp/cakephp-codesniffer,../../slevomat/coding-standard
+> App\Console\Installer::postInstall
+Created `config/app_local.php` file
+Created `/ecommerce/cake/logs` directory
+Created `/ecommerce/cake/tmp/cache/views` directory
+Set Folder Permissions ? (Default to Y) [Y,n]? y
+Permissions set on /ecommerce/cake/tmp/cache/views
+Permissions set on /ecommerce/cake/logs
+Updated Security.salt value in config/app_local.php
+
