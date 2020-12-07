@@ -20,15 +20,15 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
-// $this->disableAutoLayout();
+$this->disableAutoLayout();
 
-// if (!Configure::read('debug')) :
-//     throw new NotFoundException(
-//         'Please replace templates/Pages/home.php with your own version or re-enable debug mode.'
-//     );
-// endif;
+if (!Configure::read('debug')) :
+    throw new NotFoundException(
+        'Please replace templates/Pages/home.php with your own version or re-enable debug mode.'
+    );
+endif;
 
- $cakeDescription = 'Xmas 2020';
+$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,11 +53,10 @@ use Cake\Http\Exception\NotFoundException;
     <header>
         <div class="container text-center">
             <a href="https://cakephp.org/" target="_blank" rel="noopener">
-                <!-- <img alt="CakePHP" src="https://cakephp.org/v2/img/logos/CakePHP_Logo.svg" width="350" /> -->
+                <img alt="CakePHP" src="https://cakephp.org/v2/img/logos/CakePHP_Logo.svg" width="350" />
             </a>
-            <br>
             <h1>
-                Welcome to Xmas 2020  (🎅)
+                Alterando Css pelo Formulario  (🍓)
             </h1>
         </div>
     </header>
@@ -78,31 +77,31 @@ use Cake\Http\Exception\NotFoundException;
                                 </li>
                             </ul>
                         </div> -->
-                        <!-- <?php Debugger::checkSecurityKeys(); ?> -->
-                    </div>
+                      
                 </div>
                 <div class="row">
                     <div class="column">
-                        <h4>Environment</h4>
-                        <ul>
-                        
-                            <li class="bullet success">Your version of PHP is 7.2.0 or higher (detected <?php echo PHP_VERSION ?>).</li>
-                        
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h4>Filesystem</h4>
-                        <ul>
-                        
-                            <li class="bullet success">Your tmp directory is writable.</li>
-                        
-                        </ul>
+                
+                <form method="get" action="">
+                    <label for="itxt">Texto: </label>
+                
+                
+                
+                </form>
+                
+                
                     </div>
                 </div>
                 <hr>
-
+                <div class="row">
+                    <div class="column">
+                    </div>
+                    
+                <hr>
                 
                 
+            </div>
+        </div>
     </main>
 </body>
 </html>

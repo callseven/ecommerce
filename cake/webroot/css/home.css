@@ -11,13 +11,15 @@
     font-style: normal;
 }
 body {
-    padding: 60px 0;
+    padding: 0px 0;
+    margin-bottom: 00px;
+    
 }
 header {
-    margin-bottom: 60px;
+    margin-bottom: 00px;
 }
 img {
-    margin-bottom: 30px;
+    margin-bottom: 00px;
 }
 h1 {
     font-weight: bold;
@@ -31,6 +33,14 @@ a {
     color: #0071BC;
     text-decoration: underline;
 }
+.container-red {
+    background-color: #0071BC;
+    background-image: url(bg_01.png);
+
+    color: #ffffff;
+    
+}
+
 hr {
     border-bottom: 1px solid #e7e7e7;
     border-top: 0;
@@ -52,7 +62,7 @@ hr {
     font-family: 'cakefont', sans-serif;
     font-size: 18px;
     display: inline-block;
-    margin-left: -1.3em;
+    margin-left: 0em;
     width: 1.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
