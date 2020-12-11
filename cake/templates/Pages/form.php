@@ -88,7 +88,7 @@ use Cake\Http\Exception\NotFoundException;
     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   </div>
   <div class="form-group col-6">
-  <label for="telefone">Email</label>
+  <label for="telefone">Telefone</label>
     <input type="telefone" class="form-control" id="telefone" aria-describedby="emailHelp" placeholder="Digite telefone">
     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   </div>

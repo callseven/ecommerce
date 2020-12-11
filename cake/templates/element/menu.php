@@ -15,7 +15,7 @@
         <a class="nav-link" href="http://localhost/cake/pages/sobevento">Sobre</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake/pages/form">Cadastro</a>
+        <a class="nav-link" href="http://localhost/cake/inscricao/">Inscrição</a>
       </li>
     </ul>
     <span class="navbar-text">
