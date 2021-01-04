@@ -60,52 +60,21 @@ use Cake\Http\Exception\NotFoundException;
             <a href="https://cakephp.org/" target="_blank" rel="noopener">
                 <img alt="CakePHP" src="/cake/img/logoxmas.png" width="250" />
             </a>
-            <h1>
-            Cadastre-se no Evento 
-            </h1>
         </div>
     </header>
     <main class="main">
-        <div class="container">
+        <div class="container text-center">
             <div class="content">
                 <div class="row">
                     <div class="column">
                     
+            <h1>
+            Obrigado por inscrever-se no Evento ! 🦌
+            </h1>
 
 
 
                     
-                    <form>
-
-<div class="form-group col-6">
-    <label for="nome">Nome</label>
-    <input type="nome" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group col-6">
-  <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group col-6">
-  <label for="endereco">Endereço</label>
-    <input type="endereco" class="form-control" id="telefone" aria-describedby="emailHelp" placeholder="Digite seu endereço">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group col-6">
-  <label for="telefone">Telefone</label>
-    <input type="telefone" class="form-control" id="telefone" aria-describedby="emailHelp" placeholder="Digite telefone">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  
-  <div class="form-group col-6">
-    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
-    <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
-    <button type="submit" class="btn btn-danger">Cadastrar</button>
-</div>
-
-</form>
-                     
                
                 
                 
@@ -115,6 +84,14 @@ use Cake\Http\Exception\NotFoundException;
             </div>
         </div>
     </main>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
 </body>
 </html>
 

@@ -17,6 +17,12 @@
       <li class="nav-item">
         <a class="nav-link" href="http://localhost/cake/inscricao/">Inscrição</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/cake/palestrantes/">Palestrantes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/cake/palestras/">Palestras</a>
+      </li>
     </ul>
     <span class="navbar-text">
       Have yourself a merry little Christmas

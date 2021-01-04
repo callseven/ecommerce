@@ -1,6 +1,8 @@
 <?php
 require __DIR__.'/vendor/autoload.php';
 
+define('TITLE','Cadastrar Vaga');
+
 use App\Entity\Vaga;
 
 
@@ -11,9 +13,13 @@ use App\Entity\Vaga;
         $obVaga->descricao = $_POST['descricao'];
         $obVaga->ativo = $_POST['ativo'];
         $obVaga->cadastrar();
+
+        header('location: index.php?status=success');
+        exit;
+
+        //print_r($obVaga);
     }
 
-include __DIR__.'/include/header.php';
-include __DIR__.'/include/formulario.php';
-include __DIR__.'/include/footer.php';
-
+    include __DIR__.'/include/header.php';
+    include __DIR__.'/include/formulario.php';
+    include __DIR__.'/include/footer.php';

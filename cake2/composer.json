@@ -1,0 +1,21 @@
+{
+    "name": "call/cake",
+    "description": "Projeto Cake",
+    "authors": [
+        {
+            "name": "Call Cake",
+            "email": "call@call.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\" : "core",
+            "Sts\\": "app/sts",
+            "App\\": "app"
+        }
+    },
+    "require": {
+        "cakephp/cakephp"
+
+    }
+}

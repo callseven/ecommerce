@@ -2,7 +2,8 @@
 
 namespace App\Entity;
 
-use App\Db\Database;
+use \App\Db\Database;
+use \PDO;
 
 class Vaga {
 
