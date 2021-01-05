@@ -2,13 +2,14 @@
 
 namespace App\Model;
 
-class Inscricao  {
+class Inscricao extends AppModel {
 
     public $name = 'Inscricao';
 	public $useTable = 'inscricoes';
 	public $cacheQueries = true;
 	public $order = array('Inscricao.id' => 'ASC');
 	public $displayField = 'nome';
+
 	public $validate = array(
 		'nome' => array(
 			'allowEmpty' => false,

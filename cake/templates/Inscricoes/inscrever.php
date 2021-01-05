@@ -8,10 +8,8 @@
 
 <br><div class="content col-6">
 <h3>Inscrição</h3>
-<form class="form- ">
-<!-- <div class="form-group mb-2"> -->
 
-<?php echo $this->Form->create(); ?>
+<?php echo $this->Form->create(null, array('url' => ['controller' => 'inscricoes', 'action' => 'inscrever'])); ?>
 <label for="nome">Nome</label>
  <?php echo $this->Form->input('nome', array('label' => 'Nome','placeholder' => 'Digite seu Nome')); ?>
 <label for="email">Email</label>
