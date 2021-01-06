@@ -53,7 +53,7 @@ use Cake\Http\Exception\NotFoundException;
     <header>
         <div class="container text-center">
             <a href="https://cakephp.org/" target="_blank" rel="noopener">
-                <img alt="CakePHP" src="webroot/img/logoxmas.png" width="350" />
+                <img alt="CakePHP" src="img/logoxmas.png" width="350" />
             </a>
             <br>
             <h1>
@@ -87,19 +87,19 @@ use Cake\Http\Exception\NotFoundException;
                         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rudolph.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rudolph.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Rudolph</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena01.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena01.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Dasher</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena02.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena02.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Dancer</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
@@ -109,19 +109,19 @@ use Cake\Http\Exception\NotFoundException;
 
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena03.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena03.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Prancer</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena04.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena04.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Vixen</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena05.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena05.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Comet</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
@@ -130,19 +130,19 @@ use Cake\Http\Exception\NotFoundException;
 
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena06.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena06.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Cupid</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena07.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena07.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Donner</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="webroot/img/rena08.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle" src="img/rena08.jpeg" alt="Generic placeholder image" width="140" height="140">
             <h2>Blitzen</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
