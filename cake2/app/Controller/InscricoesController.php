@@ -7,6 +7,19 @@ App::uses('AppController', 'Controller');
 
 
 class InscricoesController extends AppController {
+    
+    public $scaffold = 'painel';
+    
+    
+    protected function _isPrefix($prefix) {
+        return isset($this->params['prefix']) &&
+        $this->params['prefix'] === $prefix;
+        }
+        public function beforeFilter() {
+        if ($this->_isPrefix('painel'))
+        $this->layout = 'painel'; // Layout padrão do prefixo
+        return parent::beforeFilter();
+        }
 	public $helpers = array('Html', 'Form', 'Flash');
 	public $components = array('Flash');
 	

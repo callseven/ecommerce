@@ -1,38 +1,92 @@
 <?php
-namespace App\Controller;
+App::uses('AppController', 'Controller');
 
 class PalestrasController extends AppController {
 
+	public $scaffold = 'painel';
+    public $helpers = array('Html', 'Form');
+    
+    protected function _isPrefix($prefix) {
+        return isset($this->params['prefix']) &&
+        $this->params['prefix'] === $prefix;
+        }
+        public function beforeFilter() {
+        if ($this->_isPrefix('painel'))
+        $this->layout = 'painel'; // Layout padrão do prefixo
+        return parent::beforeFilter();
+        }
+
 	public function index() {
+		$this->set('palestras', $this->Palestra->find('all'));
+	}
+
+	public function view($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+
+        $palestra = $this->Palestra->findById($id);
+        if (!$palestra) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+        $this->set('palestra', $palestra);
+    }
 
 
-		// $palestras = $this->Palestra->find('all',array(
-		// 	'order' => 'Palestra.inicio ASC')
-		// );
-		// $this->set('palestras', $palestras);
+	public function add() {
+        if ($this->request->is('post')) {
+            $this->Palestra->create();
+            if ($this->Palestra->save($this->request->data)) {
+                $this->Flash->success(__('A Palestra foi Cadastrada com Sucesso!'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Flash->error(__('Não foi possível cadastrar a Palestra.'));
+        }
 	}
-	public function adicionar() {
-		if (!empty($this->data) && $this->Palestra->save($this->data)) {
-			$this->redirect('pages/obrigado');
-		}
-	}
-	public function palestra($id, $nome) {
-		$this->set('active', 'palestra');
-		$this->Palestra->order = 'Palestra.id ASC';
-		if ($this->Palestra->read()) {
-			$palestra = $this->Palestra->read();
-			$slugNome = Inflector::slug(strtolower($palestra['Palestra']['nome']),'-');
-			if ($slugNome == $nome) {
-				$this->set('existe', true);
-				$this->set('palestra', $palestra);
-			} else {
-				$this->redirect("/palestra/$slugNome/" . $palestra['Palestra']['id']);
-			}
-		} else {
-			$this->set('existe', false);
-		}
-		$title = 'Palestra: ' . $palestra['Palestra']['nome'] . ' | Dia da comunidade alemã';
-		$this->set('title_for_layout', $title);
-	}
+
+	public function edit($id = null) {
+
+	if (!$id) {
+        throw new NotFoundException(__('Invalido'));
+    }
+
+    $palestra = $this->Palestra->findById($id);
+    if (!$palestra) {
+        throw new NotFoundException(__('Invalido'));
+    }
+
+    if ($this->request->is(array('post', 'put'))) {
+        $this->Palestra->id = $id;
+        if ($this->Palestra->save($this->request->data)) {
+            $this->Flash->success(__('Palestra Salva.'));
+            return $this->redirect(array('action' => 'index'));
+        }
+        $this->Flash->error(__('Não foi possível salvar.'));
+    }
+
+    if (!$this->request->data) {
+        $this->request->data = $palestra;
+    }
+}
+
+public function delete($id) {
+
+if ($this->request->is('get')) {
+	throw new MethodNotAllowedException();
+}
+
+if ($this->Palestra->delete($id)) {
+	$this->Flash->success(
+		__('Palestra  deletada.', h($id))
+	);
+} else {
+	$this->Flash->error(
+		__('Não foi possível deletar.', h($id))
+	);
+}
+
+return $this->redirect(array('action' => 'index'));
+}
+
 }
 ?>
