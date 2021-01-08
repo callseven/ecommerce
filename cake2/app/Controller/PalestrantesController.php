@@ -3,6 +3,8 @@ App::uses('AppController', 'Controller');
 
 class PalestrantesController extends AppController {
 	 public $scaffold = 'painel';
+	//  public $scaffold = 'admin';
+
 
 	 	public $helpers = array('Html', 'Form');
 

@@ -41,7 +41,9 @@
       <li class="nav-item">
         <a class="nav-link" href="http://localhost/cake2/painel/palestras/">Palestras</a>
       </li>
+
     </ul>
+    <a class="nav-link" href="http://localhost/cake2/painel/usuarios/">Admin</a>
     <span class="navbar-text">
       Have yourself a merry little Christmas
     </span>
@@ -55,14 +57,14 @@
             <div class="content col-12">
                 <div class="row">
                     <div class="column">
-                        
+
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		
+
 	</div>
 				</div></div></div>
 

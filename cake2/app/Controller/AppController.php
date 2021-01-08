@@ -21,7 +21,7 @@
 
 App::uses('Controller', 'Controller');
 
-// public $components = array('Session', 'Auth');
+
 /**
  * Application Controller
  *
@@ -33,30 +33,27 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $components = array(
-        'Flash',
-        'Auth' => array(
-            'loginRedirect' => array(
-                'controller' => 'painel',
-                'action' => 'index'
-            ),
-            'logoutRedirect' => array(
-                'controller' => 'painel',
-                'action' => 'index',
-                'home'
-            ),
-            'authenticate' => array(
-                'Form' => array(
-                    'passwordHasher' => 'Blowfish'
-                )
-            )
-        )
-    );
+    public $components = array('Session', 'Auth', 'Flash');
+
+    protected function _isPrefix($prefix) {
+        return isset($this->params['prefix']) && $this->params['prefix'] === $prefix;
+    }
 
     public function beforeFilter() {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->authenticate = array('Form' => array(
+        'userModel' => 'Usuario',
+        'fields' => array(
+        'username' => 'login',
+        'password' => 'senha')));
+        $this->Auth->loginAction = array(
+        'controller' => 'usuarios',
+        'action' => 'login',
+        'painel' => true);
+        if (!$this->_isPrefix('painel'))
+        $this->Auth->allow();
     }
 
 
 
+    public $helpers = array('Html', 'Form', 'Session');
 }

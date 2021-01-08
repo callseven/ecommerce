@@ -33,6 +33,7 @@
 	Router::connect('/inscricoes', array('controller' => 'Inscricoes', 'action' => 'inscrever'));
 	Router::connect('/inscricao', array('controller' => 'Inscricoes', 'action' => 'inscrever'));
 	Router::connect('/painel', array('controller' => 'Painel', 'action' => 'index'));
+	// Router::connect('/painel/usuarios', array('controller' => 'Usuarios', 'action' => 'login'));
 	// Router::connect('/painel/mapa', array('controller' => 'painel', 'action' => 'mapa' ));
 	// Router::connect('/painel/sobevento', array('controller' => 'painel', 'action' => 'sobevento'));
 

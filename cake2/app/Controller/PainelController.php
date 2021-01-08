@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 class PainelController extends AppController {
 
 	public $scaffold = 'painel';
-    // public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form');
 
     protected function _isPrefix($prefix) {
         return isset($this->params['prefix']) &&

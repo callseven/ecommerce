@@ -2,8 +2,9 @@
 
 App::uses('AppController', 'Controller');
 
-class UsersController extends AppController {
-	public $scaffold = 'painel';
+class UsuariosController extends AppController {
+
+    public $scaffold = 'painel';
 
     protected function _isPrefix($prefix) {
         return isset($this->params['prefix']) &&
