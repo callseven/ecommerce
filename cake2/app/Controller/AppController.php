@@ -33,27 +33,16 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $components = array('Session', 'Auth', 'Flash');
+    public $components = array(
+        'Flash',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )
+    );
 
-    protected function _isPrefix($prefix) {
-        return isset($this->params['prefix']) && $this->params['prefix'] === $prefix;
+    function beforeFilter() {
+        $this->Auth->allow('index', 'view');
     }
 
-    public function beforeFilter() {
-        $this->Auth->authenticate = array('Form' => array(
-        'userModel' => 'Usuario',
-        'fields' => array(
-        'username' => 'login',
-        'password' => 'senha')));
-        $this->Auth->loginAction = array(
-        'controller' => 'usuarios',
-        'action' => 'login',
-        'painel' => true);
-        if (!$this->_isPrefix('painel'))
-        $this->Auth->allow();
-    }
-
-
-
-    public $helpers = array('Html', 'Form', 'Session');
 }

@@ -6,7 +6,7 @@ class DATABASE_CONFIG {
 		'persistent' => true,
 		'host' => '127.0.0.1',
 		'login' => 'root',
-		'password' => '123456',
+		'password' => '',
 		'database' => 'cake',
 	);
 	public $test = array(
@@ -14,7 +14,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => '127.0.0.1',
 		'login' => 'root',
-		'password' => '123456',
+		'password' => '',
 		'database' => 'cake',
 	);
 	public $Database = array(
@@ -23,7 +23,7 @@ class DATABASE_CONFIG {
 		'host' => '127.0.0.1',
 		'port' => 3306,
 		'login' => 'root',
-		'password' => '123456',
+		'password' => '',
 		'database' => 'cake',
 	);
 }

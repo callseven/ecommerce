@@ -27,4 +27,4 @@ echo $this->Form->input('url');
 echo $this->Form->end('Cadastrar Palestrante');
 ?>
 
-<li><a href="/cake2/palestrantes">Listar Palestrantes</a></li>
+<li><a href="../palestrantes">Listar Palestrantes</a></li>

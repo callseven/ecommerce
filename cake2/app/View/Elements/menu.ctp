@@ -9,19 +9,19 @@
         <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake2/pages/mapa">Localização</a>
+        <a class="nav-link" href="http://localhost/dashboard/ecommerce/cake2/pages/mapa">Localização</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake2/pages/sobevento">Sobre</a>
+        <a class="nav-link" href="http://localhost/dashboard/ecommerce/cake2/pages/sobevento">Sobre</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake2/inscricao/">Inscrição</a>
+        <a class="nav-link" href="http://localhost/dashboard/ecommerce/cake2/inscricao/">Inscrição</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake2/palestrantes/">Palestrantes</a>
+        <a class="nav-link" href="http://localhost/dashboard/ecommerce/cake2/palestrantes/">Palestrantes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/cake2/palestras/">Palestras</a>
+        <a class="nav-link" href="http://localhost/dashboard/ecommerce/cake2/palestras/">Palestras</a>
       </li>
     </ul>
     <span class="navbar-text">
